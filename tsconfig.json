@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
+        "strict": true,
+        "module": "nodenext",
+        "target": "ES2022",
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": true,
+        "skipLibCheck": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "paths": {
+            "#*": [
+                "./src/*",
+                "./dist/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.js",
+    ],
+    "exclude": [
+        "node_modules",
+        "src/**/*.test.*",
+        "src/**/*.spec.*"
+    ]
+}

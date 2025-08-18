@@ -25,3 +25,12 @@ export type ReturnDatatype = {
   warehouseList: warehouseListType[]
 }
 
+export type ReturnTarrifs = {
+  warehouse_name: string,
+  geo_name: string,
+  box_delivery_coef: string,
+  box_storage_coef: string,
+  date: Date
+}
+
+

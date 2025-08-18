@@ -1,5 +1,5 @@
-import type { ResponseDataType, ReturnDatatype } from '../types';
-import { parseDate } from './parseDate.js';
+import type { ResponseDataType, ReturnDatatype } from '../types.ts';
+import { parseDate } from './parseDate.ts';
 import 'dotenv/config';
 
 export async function getBoxTarrifs(date: Date) : Promise<ReturnDatatype | undefined> {

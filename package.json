@@ -1,6 +1,26 @@
 {
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "migrate": "node --loader ts-node/esm ./node_modules/knex/bin/cli.js --knexfile ./src/knexfile.ts migrate:latest",
+    "start": "npx ts-node src/app.ts",
+    "dev": "nodemon --watch src --ext ts --exec tsx src/app.ts",
+    "start-with-migrate": "npm run migrate && npm run dev"
+  },
+  "imports": {
+    "#*": [
+      "./dist/*",
+      "./src/*"
+    ]
+  },
+  "_moduleAliases": {
+    "#": "src"
+  },
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "dotenv": "^17.2.1",
+    "googleapis": "^105.0.0",
     "knex": "^3.1.0",
     "node-cron": "^4.2.1",
     "pg": "^8.16.3"
@@ -10,10 +30,8 @@
     "@types/node": "^24.3.0",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.4",
     "typescript": "^5.9.2"
-  },
-  "type": "module",
-  "scripts": {
-    "dev": "nodemon --exec \"node --loader ts-node/esm\" src/app.ts"
   }
 }

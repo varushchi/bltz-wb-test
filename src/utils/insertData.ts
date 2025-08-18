@@ -1,6 +1,6 @@
-import { getBoxTarrifs } from "./getBoxTarrifs.js";
+import { getBoxTarrifs } from "./getBoxTarrifs.ts";
 import knex from "knex";
-import knexConfig from '../../knexfile.js'
+import knexConfig from '../knexfile.ts'
 
 export async function insertData () {
   const db = knex(knexConfig.development);
