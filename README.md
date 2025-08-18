@@ -11,12 +11,6 @@ docker compose up -d --build my_postgres
 npm run migrate
 ```
 
-Отдельная работа с миграциями:
-```bash
-npx knex migrate:latest
-npx knex migrate:rollback --all
-```
-
 Для запуска в режиме разработки:
 ```bash
 npm run dev
