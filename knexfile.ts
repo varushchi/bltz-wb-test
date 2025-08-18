@@ -1,22 +1,20 @@
+import type { Knex } from 'knex';
+import 'dotenv/config';
 
-/**
- * @type { Object.<string, import("knex").Knex.Config> }
- */
-module.exports = {
+const knexConfig: { [key: string]: Knex.Config } = {
   development: {
     client: 'postgresql',
     connection: {
       database: process.env.POSTGRES_DB,
-      user:     process.env.POSTGRES_USER,
+      user: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    pool: { min: 2, max: 10 },
     migrations: {
-      tableName: 'knex_migrations'
-    }
+      tableName: 'knex_migrations',
+      directory: './src/postgres/migrations',
+    },
   },
-
 };
+
+export default knexConfig;

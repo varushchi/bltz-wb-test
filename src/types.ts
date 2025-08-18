@@ -15,11 +15,13 @@ export type warehouseListType = {
 
 export type ResponseDataType = {
   response: {
-    data: {
-      dtNextBox: string,
-      dtTillMax: string,
-      warehouseList: warehouseListType[]
-    }
+    data: ReturnDatatype
   }
+}
+
+export type ReturnDatatype = {
+  dtNextBox: string,
+  dtTillMax: string,
+  warehouseList: warehouseListType[]
 }
 
