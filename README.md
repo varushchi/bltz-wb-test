@@ -34,5 +34,5 @@ docker compose up -d --build app
 
 ### Гугл таблица
 
-[Ссылка]([https://www.genome.gov/](https://docs.google.com/spreadsheets/d/1pFLQttagLoGHpp4FWezoV_QvGkjUYGVAzBXEhnoPrzw/edit?usp=sharing))
+<a href="https://docs.google.com/spreadsheets/d/1pFLQttagLoGHpp4FWezoV_QvGkjUYGVAzBXEhnoPrzw/edit?usp=sharing" target="_blank">Ссылка</a>  
 Файл с кредами гугла btlz-wb-test-469415-f829d479cf7a.json в рут директории
